@@ -51,7 +51,7 @@ const game = () => {
                     console.log(`./ images / ${this.textContent}.png`);
                     console.log(`./ images / ${computerChoice}.png`);
                     compareHands(playerChoice, computerChoice);
-                }, 1000);
+                }, 900);
 
                 playerHand.style.animation = "shakePlayer 1s ease";
                 computerHand.style.animation = "shakeComputer 1s ease";

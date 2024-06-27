@@ -31,10 +31,14 @@
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
+    body{
+        height: 100%;
+        width: 100vw;
+        overflow: hidden;
+    }
     .alert_area {
         display: none;
     }
-
     section {
         width: 100vw;
         height: 100%;
