@@ -41,7 +41,7 @@
     }
 
     .intro button,
-    .match button {
+    .options button {
         width: 150px;
         height: 50px;
         background: none;
@@ -75,10 +75,12 @@
 
     .hands {
         height: 40vh;
+        
     }
 
     .hands img {
         width: 250px;
+        margin:0 50px;
     }
 
     .computer-hand {
@@ -87,6 +89,8 @@
 
     .options {
         width: 750px;
+        margin: 50px auto;
+        z-index: 5;
     }
 
     div.fadeOut {
