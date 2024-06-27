@@ -24,6 +24,10 @@
     .alert_area>p::before {
         content: "縦画面に戻してください";
     }
+
+    section {
+        display: none;
+    }
 }
 
 @media screen and (orientation: portrait) and (max-width: 768px) {
@@ -32,8 +36,10 @@
     }
 
     section {
+        width: 100vw;
         height: 100vh;
         background-color: #fff;
+        overflow: hidden;
     }
 
     .score {
