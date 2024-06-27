@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .alert_area {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #171b20;
+        z-index: 999;
+    }
+
+    .alert_area>p {
+        color: #fff;
+        text-align: center;
+        height: 100vh;
+        line-height: 100vh;
+    }
+
+    .alert_area>p::before {
+        content: "縦画面に戻してください";
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 768px) {
+    .alert_area {
+        display: none;
+    }
+
+    section {
+        height: 100vh;
+        background-color: #fff;
+    }
+
+    .score {
+        height: 15vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .score h2 {
+        font-size: 20px;
+    }
+
+    .score p {
+        text-align: center;
+        padding: 0;
+        font-size: 30px;
+    }
+
+    .intro {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: opacity 0.5s ease;
+    }
+
+    .intro h1 {
+        font-size: 50px;
+    }
+
+    .intro button,
+    .match button {
+        width: 200px;
+        height: 75px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        background-color: rgb(39, 41, 68);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .match {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.5s ease 0.5s;
+    }
+
+    .winner {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .hands,
+    .options {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hands {
+        height: 60vh;
+        width: 100vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse
+    }
+
+    .hands img {
+        width: 40vw;
+        margin: 5vw 0;
+    }
+
+    .computer-hand {
+        transform: rotateX(180deg);
+    }
+
+    .options {
+        width: 100vw;
+        position: absolute;
+    }
+
+    div.fadeOut {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    div.fadeIn {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    @keyframes shakePlayer {
+        0% {
+            transform: translateY(0px);
+        }
+
+        20% {
+            transform: translateY(50px);
+        }
+
+        40% {
+            transform: translateY(0px);
+        }
+
+        60% {
+            transform: translateY(50px);
+        }
+
+        80% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(50px);
+        }
+
+    }
+
+    @keyframes shakeComputer {
+        0% {
+            transform: rotateX(180deg) translateY(0px);
+        }
+
+        20% {
+            transform: rotateX(180deg) translateY(50px);
+        }
+
+        40% {
+            transform: rotateX(180deg) translateY(0px);
+        }
+
+        60% {
+            transform: rotateX(180deg) translateY(50px);
+        }
+
+        80% {
+            transform: rotateX(180deg) translateY(0px);
+        }
+
+        100% {
+            transform: rotateX(180deg) translateY(50px);
+        }
+
+    }
+}
