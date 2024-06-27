@@ -6,10 +6,12 @@ const game = () => {
         const playBtn = document.querySelector(".intro button");
         const introScreen = document.querySelector(".intro");
         const match = document.querySelector(".match");
+        const optionsBtn = document.querySelector(".options");
 
         playBtn.addEventListener("click", () => {
             introScreen.classList.add("fadeOut");
             match.classList.add("fadeIn");
+            optionsBtn.classList.add("fadeIn");
         });
     };
 

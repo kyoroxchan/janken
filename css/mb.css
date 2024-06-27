@@ -67,7 +67,7 @@
     }
 
     .intro button,
-    .match button {
+    .options button {
         width: 200px;
         height: 75px;
         background: none;
@@ -119,6 +119,7 @@
     .options {
         width: 100vw;
         position: absolute;
+        bottom: 0;
     }
 
     div.fadeOut {
